@@ -19,6 +19,6 @@ jobs:
   j3:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/hello-world-javascript-action
+      - uses: actions/hello-world-javascript-action@v1
         with:
           who-to-greet: "world"
