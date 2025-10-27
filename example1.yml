@@ -1,0 +1,25 @@
+name: example one
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  j1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "This is example one"
+
+  j2:
+    runs-on: ubuntu-latest
+    steps:
+      - run: print("hello world")
+        shell: python
+
+  j3:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/hello-world-javascript-action
+        with:
+          who-to-greet: "world"
