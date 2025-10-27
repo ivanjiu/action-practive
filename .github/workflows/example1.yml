@@ -2,8 +2,7 @@ name: example one
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
   j1:
