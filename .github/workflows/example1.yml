@@ -4,7 +4,7 @@ on:
   push:
     branches: 
       - main
-
+#why is the main causing two workflows to run?
 jobs:
   j1:
     runs-on: ubuntu-latest
