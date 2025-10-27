@@ -1,0 +1,18 @@
+# name: reuseable workflow
+
+# on:
+#   push:
+#     branches:
+#       - main
+
+# jobs:
+#   call-build:
+#     name: build app
+#     uses: ./.github/workflows/gemini-reuseable.yml
+#     with:
+#       node-version: "18"
+    
+#   deploy:
+#     name: deploy app
+#     runs-on: ubuntu-latest
+    
