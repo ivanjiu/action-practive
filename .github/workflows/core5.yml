@@ -1,0 +1,35 @@
+name: env varibale experiment
+
+env:
+  WORKFLOW_VAR: IAMENVVAR
+
+on:
+  push:
+    branches:
+      - main
+    
+jobs:
+  j1:
+    runs-on: ubuntu-latest
+    env:
+      JOB_VAR: IAMJOBVAR
+    steps:
+      - name: inspect job1 step1
+        env:
+          STEP_VAR: IAMSTEPVAR
+        run: |
+          echo "workflowvar: $WORKFLOW_VAR"
+          echo "jobvar: $JOB_VAR"
+          echo "stepVAR: $STEP_VAR"
+      - name: inspect job1 step2
+        run: |
+          echo "workflowvar: $WORKFLOW_VAR"
+          echo "jobvar: $JOB_VAR"
+          echo "stepVAR: $STEP_VAR"
+  j2:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "workflowvar: $WORKFLOW_VAR"
+          echo "jobvar: $JOB_VAR"
+          echo "stepVAR: $STEP_VAR"
