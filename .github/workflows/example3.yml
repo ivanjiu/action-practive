@@ -15,7 +15,7 @@ jobs:
     needs: [j1,j3]
     runs-on: ubuntu-latest
     steps:
-      - run: echo "j2 "a1"
+      - run: echo "j2 a1"
   j3: 
     runs-on: ubuntu-latest
     steps:
